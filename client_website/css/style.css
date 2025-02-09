@@ -20,7 +20,7 @@
     font-family: 'Poppins', sans-serif;
 }
 .section-one{
-    background: url(../images/night.JPG);
+    background: url(../images/night.jpg);
     background-size: cover;
     height: 2000px;
     
@@ -35,7 +35,7 @@
 }
 .section-three{
     background-color: #000;
-    height: 1000px;
+    height: 1500px;
     color: #fff;
 }
 
@@ -104,7 +104,11 @@ header-three{
     position: relative;
     width: 100%;
     
+    
 
+}
+.edit{
+    padding-top: 130px;
 }
 
 .container{
@@ -120,9 +124,30 @@ header-three{
     
 
 }
+
+.title-three{
+    font-size: 60px;
+    font-weight: 400;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    text-align: center;
+    padding-top: 30px;
+
+}
+.sub-three{
+    font-size: 30px;
+    font-weight: 300;
+    color:#aaa;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    
+}
 p{
     width:1000px;
 }
+
 .sub-two{
     font-size: 30px;
     font-weight: 300;
@@ -134,6 +159,14 @@ p{
 .about-img img{
     width: 500px;
     height: 500px;
+    border: 3px solid white;
+    
+}
+.about-img2 img{
+    width: 700px;
+    height: 500px;
+    border: 3px solid white;
+    
 }
 
 #logo{
@@ -206,6 +239,30 @@ p{
     color: white;
     text-decoration: none;
 }
+
+#btn-id{
+    background: var(--clr-slate600);
+    color:#fff;
+    font-size: 10px;
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+    transition: background 1s ease;
+    background-size:cover;
+    
+}
+#btn2-id{
+    background: var(--clr-slate600);
+    color:#fff;
+    font-size: 10px;
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+    transition: background 1s ease;
+    
+}
+
+
 .header__line {
     border: 1px solid var(--clr-light);
     padding-top: 1.5em;
