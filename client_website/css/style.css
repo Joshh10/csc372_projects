@@ -52,7 +52,11 @@
     
 }
 
-
+.description{
+    font-size: 15px;
+    color: #aaa;
+    text-transform: lowercase;
+}
 
 
 .title, .sub-name{
@@ -351,3 +355,133 @@ p{
 }
 
 
+@media screen and (max-width: 3440px){
+    .container{
+        padding: 80px;
+        width: 100%;
+        overflow: hidden;
+    }
+    .section-two, .section-three{
+        width: 3400px;
+        overflow: hidden;
+    }
+    .title-two, .title-three{
+        font-size: 50px;
+    }
+    .about-img img, .about-img2 img{
+        width: 600px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 2560px){
+    .container{
+        padding: 60px;
+        width: 100%;
+    }
+    .section-two, .section-three{
+        width: 100%;
+    }
+    .title-two, .title-three{
+        font-size: 45px;
+    }
+    .about-img img, .about-img2 img{
+        width: 500px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1920px){
+    .container{
+        padding: 50px;
+        width: 100%;
+    }
+    .section-two, .section-three{
+        width: 100%;
+    }
+    .title-two, .title-three{
+        font-size: 40px;
+    }
+    .about-img img, .about-img2 img{
+        width: 400px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1440px){
+    .container{
+        padding: 40px;
+        width: 100%;
+    }
+    .section-two, .section-three{
+        width: 100%;
+    }
+    .title-two, .title-three{
+        font-size: 35px;
+    }
+    .about-img img, .about-img2 img{
+        width: 350px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .container{
+        padding: 30px;
+        width: 100%;
+    }
+    .items{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .section-two, .section-three{
+        width: 100%;
+    }
+    .title-two, .title-three{
+        font-size: 30px;
+    }
+    .about-img img, .about-img2 img{
+        width: 300px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .header{
+        padding: 5% 5%;
+    }
+    .container{
+        padding: 20px;
+        width: 100%;
+    }
+    .section-two, .section-three{
+        width: 100%;
+    }
+    .title-two, .title-three{
+        font-size: 25px;
+    }
+    .about-img img, .about-img2 img{
+        width: 250px;
+        height: auto;
+    }
+    
+}
+
+@media screen and (max-width: 480px){
+    .header{
+        min-height: 60vh;
+    }
+    .container{
+        width: 100%;
+    }
+    .section-two, .section-three{
+        width: 100%;
+    }
+    .title-two, .title-three{
+        font-size: 20px;
+    }
+    .about-img img, .about-img2 img{
+        width: 200px;
+        height: auto;
+    }
+}
