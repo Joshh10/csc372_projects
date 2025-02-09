@@ -40,8 +40,9 @@ let section2 = document.querySelector(".section-one");
 
 button2.addEventListener("click", function(){
    
-    section2.style.backgroundImage = 'url(../images/night.jpg)';
+    section2.style.backgroundImage = 'url(../images/lights.jpg)';
 
 });
+
 
 

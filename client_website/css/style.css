@@ -35,7 +35,7 @@
 }
 .section-three{
     background-color: #000;
-    height: 1500px;
+    height: 2000px;
     color: #fff;
 }
 
@@ -267,6 +267,10 @@ p{
     border: 1px solid var(--clr-light);
     padding-top: 1.5em;
 }
+.header__line2 {
+    border: 1px solid var(--clr-dark);
+    padding-top: 1.5em;
+}
 
 .navbar__links {
     color: var(--clr-light);
@@ -287,3 +291,63 @@ p{
     z-index: 2;
 
 }
+
+.footerNavbar {
+    height : 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: relative;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    text-decoration: none;
+}
+
+.footerNavbar_container {
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 30 0px;
+    
+}
+
+.footerNavbar__links {
+    color: var(--clr-dark);
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 5rem;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+   
+}
+
+.footerNavbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.footerNavbar__item {
+    height: 80px;
+
+}
+
+.footerNavbar img{
+    width:60px;
+    height: 45px;
+}
+
+.email-font{
+    color:#475569;
+    text-decoration: none;
+}
+
+
