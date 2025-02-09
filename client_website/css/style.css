@@ -35,7 +35,7 @@
 }
 .section-three{
     background-color: #000;
-    height: 2000px;
+    height: 1750px;
     color: #fff;
 }
 
@@ -297,7 +297,7 @@ p{
 }
 
 .footerNavbar {
-    height : 100px;
+    height : 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -374,13 +374,14 @@ p{
     }
 }
 
-@media screen and (max-width: 2560px){
+@media screen and (max-width: 2778px){
     .container{
         padding: 60px;
         width: 100%;
     }
     .section-two, .section-three{
         width: 100%;
+        height: 1300px;
     }
     .title-two, .title-three{
         font-size: 45px;
@@ -391,21 +392,65 @@ p{
     }
 }
 
-@media screen and (max-width: 1920px){
+@media screen and (max-width: 2103px){
     .container{
         padding: 50px;
         width: 100%;
     }
     .section-two, .section-three{
         width: 100%;
+        height: 1000px;
     }
     .title-two, .title-three{
-        font-size: 40px;
+        font-size: 20px;
     }
+
     .about-img img, .about-img2 img{
-        width: 400px;
+        width: 350px;
         height: auto;
     }
+    .title-two, .sub-two, .item{
+        padding-left: 100px;
+    }
+    .about-img{
+        padding-right:200px;
+    }
+    .sub-two, .sub-three{
+        font-size: 13px;
+    }
+    
+}
+@media screen and (max-width: 1964px){
+    .container{
+        width: 100%;
+    }
+    .section-one{
+        height: 1000px;
+    }
+    .section-two, .section-three{
+        width: 100%;
+    }
+   .item{
+    font-size: 12px;
+   }
+    .title-two, .title-three{
+        font-size: 15px;
+    }
+    .about-img img, .about-img2 img{
+        width: 300px;
+        height: auto;
+    }
+    
+    .items{
+        gap:10px;
+    }
+    .edit{
+        padding-top:100px;
+    }
+    .sub-two, .sub-three{
+        font-size: 10px;
+    }
+    
 }
 
 @media screen and (max-width: 1440px){
