@@ -1,0 +1,37 @@
+.btn{
+    padding: 8px 20px;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.solid{
+    background-color: white;
+    color: black;
+    border: 1px solid #fff;
+}
+
+.outline{
+    background-color: transparent;
+    color: #fff;
+    padding: 8px 20px;
+    border: 1px solid #fff;
+    transition: all 0.3s ease-out;
+}
+
+.medium{
+    padding: 8px 20px;
+    font-size: 20px;
+}
+
+.large{
+    padding: 12px 26px;
+    font-size: 20px;
+}
+
+.medium:hover, .large:hover{
+    background-color: #fff;
+    color: black;
+    transition: all 0.3s ease-out;
+}
