@@ -4,8 +4,9 @@ import './SectionOne.css';
 import '../App.jsx';
 
 
-
 function SectionOne() {
+  
+
   return (
     <div className='hero'>
         <h1 className='main-heading'>Rebekah Photography</h1>
