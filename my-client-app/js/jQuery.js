@@ -12,7 +12,7 @@ $(function () {
     
   
 
-    $(".main-heading").hide().slideDown(2000);
+    $(".main-heading").hide().fadeIn(2000);
 
     $(".gallery-header").hide().fadeIn(2000);
 

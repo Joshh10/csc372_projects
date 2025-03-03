@@ -1,0 +1,17 @@
+<images>
+    <image id="night">
+        <src>/new-images/lights.jpg</src>
+    </image>
+    <image id="light">
+        <src>/new-images/dog.jpg</src>
+    </image>
+    <image id="animals">
+        <src>/new-images/nature.jpg</src>
+    </image>
+    <image id="nature">
+        <src>/new-images/beach.jpg</src>
+    </image>
+    <image id="beach">
+        <src>/new-images/night.png</src>
+    </image>
+</images>
