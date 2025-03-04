@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import GalleryItem from './GalleryItem';
 import './GallerySection.css';
 import Night from '../../images/night.png'
@@ -9,44 +9,72 @@ import Light from '../../images/lights.jpg'
 
 
 function GallerySection() {
+
+  const [imageTexts, setImageTexts] = useState({
+    night: "Amazing sunset at the beach",
+    light: "Amazing sunset at the beach",
+    dog: "Amazing sunset at the beach",
+    nature: "Amazing sunset at the beach",
+    beach: "Amazing sunset at the beach"
+  });
+
+
+  const handleImageClick = (imageKey, event) => {
+    event.preventDefault(); 
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', '/data/data.json', true);
+
+    xhr.onload = () => {
+      if(xhr.status === 200){
+        const data = JSON.parse(xhr.responseText);
+        setImageTexts(prevTexts => ({
+          ...prevTexts,
+          [imageKey]: data[imageKey] 
+        }));
+        
+      }
+    };
+
+    xhr.send();
+  };
     return (
       <div className='gallery'>
-        <h1 class='gallery-header'>Gallery</h1>
+        <h1 className='gallery-header'>Gallery</h1>
         <div className='gallery-container'>
           <div className='gallery-section'>
             <ul className='gallery-items'>
               <GalleryItem
                 src={Night}
-                text='Amazing sunset at the beach'
+                text={imageTexts.night}
                 label='Nature'
-                path='/'
+                onImageClick={(e) => handleImageClick('night', e)}
               />
               <GalleryItem
                 src={Light}
-                text='Amazing sunset at the beach'
+                text={imageTexts.light}
                 label='Nature'
-                path='/'
+                onImageClick={(e) => handleImageClick('light', e)}
               />
               
             </ul>
             <ul className='gallery-items'>
               <GalleryItem
                 src={Dog}
-                text='Amazing sunset at the beach'
-                label='Nature'
-                path='/'
+                text={imageTexts.dog}
+                label='Dogs'
+                onImageClick={(e) => handleImageClick('dog', e)}
               />
               <GalleryItem
                 src={Nature}
-                text='Amazing sunset at the beach'
+                text={imageTexts.nature}
                 label='Nature'
-                path='/'
+                onImageClick={(e) => handleImageClick('nature', e)}
               />
               <GalleryItem
                 src={Beach}
-                text='Amazing sunset at the beach'
-                label='Nature'
-                path='/'
+                text={imageTexts.beach}
+                label='Beach'
+                onImageClick={(e) => handleImageClick('beach', e)}
               />
               
             </ul>
@@ -54,36 +82,36 @@ function GallerySection() {
             <ul className='gallery-items'>
               <GalleryItem
                 src={Dog}
-                text='Amazing sunset at the beach'
-                label='Nature'
-                path='/'
+                text={imageTexts.dog}
+                label='Animals'
+                onImageClick={(e) => handleImageClick('dog', e)}
               />
               <GalleryItem
                 src={Nature}
-                text='Amazing sunset at the beach'
+                text={imageTexts.nature}
                 label='Nature'
-                path='/'
+                onImageClick={(e) => handleImageClick('nature', e)}
               />
               <GalleryItem
                 src={Beach}
-                text='Amazing sunset at the beach'
-                label='Nature'
-                path='/'
+                text={imageTexts.beach}
+                label='Sunset'
+                onImageClick={(e) => handleImageClick('beach', e)}
               />
               
             </ul>
             <ul className='gallery-items'>
               <GalleryItem
                 src={Night}
-                text='Amazing sunset at the beach'
-                label='Nature'
-                path='/'
+                text={imageTexts.night}
+                label='Beach'
+                onImageClick={(e) => handleImageClick('night', e)}
               />
               <GalleryItem
                 src={Light}
-                text='Amazing sunset at the beach'
-                label='Nature'
-                path='/'
+                text={imageTexts.light}
+                label='Lights'
+                onImageClick={(e) => handleImageClick('light', e)}
               />
               
             </ul>

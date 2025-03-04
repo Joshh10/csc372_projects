@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function ImageItem(props) {
   return (
     <>
-      <li className='images-item'>
+      <li className='images-item' onClick={props.onImageClick}>
         <Link className='images-item-link' to={props.path}>
           <figure className='images-item-sub' data-category={props.label}>
             <img

@@ -5,11 +5,11 @@ function GalleryItem(props) {
   return (
     <>
       <li className='gallery-item'>
-        <Link className='gallery-item-link' to={props.path}>
+        <Link className='gallery-item-link' to={props.path} onClick={props.onImageClick}>
           <figure className='gallery-item-sub' data-category={props.label}>
             <img
               className='gallery-item-img'
-              alt='Travel Image'
+              alt=''
               src={props.src}
             />
           </figure>
