@@ -11,11 +11,11 @@ import Light from '../../images/lights.jpg'
 function GallerySection() {
 
   const [imageTexts, setImageTexts] = useState({
-    night: "Amazing sunset at the beach",
-    light: "Amazing sunset at the beach",
-    dog: "Amazing sunset at the beach",
-    nature: "Amazing sunset at the beach",
-    beach: "Amazing sunset at the beach"
+    night: " ",
+    light: " ",
+    dog: " ",
+    nature: " ",
+    beach: " "
   });
 
 
@@ -40,6 +40,7 @@ function GallerySection() {
     return (
       <div className='gallery'>
         <h1 className='gallery-header'>Gallery</h1>
+        <p className='gallery-sub-text'>Click each image for more..</p>
         <div className='gallery-container'>
           <div className='gallery-section'>
             <ul className='gallery-items'>

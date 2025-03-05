@@ -90,6 +90,11 @@ h1 {
     font-family: 'Poppins', sans-serif;
     font-weight: 350;
   }
+.gallery-sub-text{
+  display: flex;
+  justify-content: center;
+  
+}
   
   
   

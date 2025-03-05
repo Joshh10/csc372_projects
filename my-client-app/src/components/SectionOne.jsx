@@ -20,10 +20,7 @@ function SectionOne() {
             <Button className='btns' buttonStyle='outline' buttonSize='large'>
               Gallery
             </Button>
-            <h2 className='back-btn' id='back-btn'>
-              Try Me!
-            </h2>
-          
+            
         </div>
     </div>
   )
