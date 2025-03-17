@@ -1,7 +1,7 @@
 $(function () {
     $(document).on("click", ".back-btn", function () {
         $(".hero").fadeOut(100, function () {
-            $(this).css("background-image", "url('../images/lights.jpg')").fadeIn(1000);
+            $(this).css("background-image", "url('../images/lights.webp')").fadeIn(1000);
         });
     });
 

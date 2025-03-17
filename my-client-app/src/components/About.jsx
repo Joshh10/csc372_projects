@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import AboutItem from './AboutItem';
 import './About.css';
-import AboutImg from '../../images/about.jpg'
+import AboutImg from '../../images/about.webp'
 
 
 

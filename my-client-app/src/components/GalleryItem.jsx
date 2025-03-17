@@ -9,8 +9,8 @@ function GalleryItem(props) {
           <figure className='gallery-item-sub' data-category={props.label}>
             <img
               className='gallery-item-img'
-              alt=''
               src={props.src}
+              alt={props.alt}
             />
           </figure>
           <div className='gallery-item-info'>

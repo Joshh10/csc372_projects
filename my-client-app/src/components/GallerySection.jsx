@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
 import GalleryItem from './GalleryItem';
 import './GallerySection.css';
-import Night from '../../images/night.png'
-import Beach from '../../images/beach.jpg'
-import Nature from '../../images/nature.jpg'
-import Dog from '../../images/dog.jpg'
-import Light from '../../images/lights.jpg'
+import Night from '../../images/night.webp'
+import Beach from '../../images/beach.webp'
+import Nature from '../../images/nature.webp'
+import Dog from '../../images/dog.webp'
+import Light from '../../images/lights.webp'
 
 
 function GallerySection() {
@@ -52,6 +52,7 @@ function GallerySection() {
               />
               <GalleryItem
                 src={Light}
+                alt="Light"
                 text={imageTexts.light}
                 label='Nature'
                 onImageClick={(e) => handleImageClick('light', e)}
