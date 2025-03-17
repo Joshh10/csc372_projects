@@ -1,8 +1,29 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import './Form.css'
 import {Button} from './Button';
 
 function Form() {
+    useEffect(() => {
+        const loadGoogleMaps = () => {
+          const script = document.createElement('script');
+          script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCA0gKkVCMdOnF4-lZ8J4XknR_dyCqtzfM&callback=initMap`;
+          script.async = true;
+          script.defer = true;
+          document.body.appendChild(script);
+    
+          script.onload = () => {
+            window.initMap = function () {
+              new window.google.maps.Map(document.getElementById("map"), {
+                center: { lat: 41.5909, lng: -71.2536 }, 
+                zoom: 12,
+        
+              });
+            };
+          };
+        };
+    
+        loadGoogleMaps();
+      }, []);
   return (
     <div className='container'>
         <div className='row1'>
@@ -48,7 +69,10 @@ function Form() {
                 </form>
             </div>
         </div>
+        <div id="map" style={{ width: '50%', height: '400px', marginTop: '20px', marginLeft: '25%' }}></div>
     </div>
+    
+    
   )
 }
 

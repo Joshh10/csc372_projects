@@ -8,7 +8,7 @@ function ImageItem(props) {
         <Link className='images-item-link' to={props.path}>
           <figure className='images-item-sub' data-category={props.label}>
             <img
-              className='images-item-img' alt='' src={props.src}/>
+              className='images-item-img' alt={props.alt} src={props.src}/>
           </figure>
           <div className='images-item-info'>
             <h5 className='images-item-text'>{props.text}</h5>

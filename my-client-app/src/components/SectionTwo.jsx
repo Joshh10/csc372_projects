@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
 import ImageItem from './ImageItem';
 import './SectionTwo.css';
-import Night from '../../images/night.png'
-import Beach from '../../images/beach.jpg'
-import Nature from '../../images/nature.jpg'
-import Dog from '../../images/dog.jpg'
-import Light from '../../images/lights.jpg'
+import Night from '../../images/night.webp'
+import Beach from '../../images/beach.webp'
+import Nature from '../../images/nature.webp'
+import Dog from '../../images/dog.webp'
+import Light from '../../images/lights.webp'
 
 
 function SectionTwo() {
@@ -52,12 +52,14 @@ function SectionTwo() {
             <ul className='images-items'>
               <ImageItem
                 src={galleryImages.night}
+                alt="Sunset on the beach"
                 text='Chasing the last light of day.'
                 label='Sunsets'
                 onImageClick={() => handleImageClick('night')}
               />
               <ImageItem
                 src={galleryImages.light}
+                alt="Neon night lights"
                 text='A dance of light through the night.'
                 label='Night Lights'
                 onImageClick={() => handleImageClick('light')}
@@ -68,18 +70,21 @@ function SectionTwo() {
             <ul className='images-items'>
               <ImageItem
                 src={galleryImages.animals}
+                alt="Puppy on the beach"
                 text='Unconditional joy in every step.'
                 label='Animals'
                 onImageClick={() => handleImageClick('animals')}
               />
               <ImageItem
                 src={galleryImages.nature}
+                alt="Close up of pink flowers"
                 text='Nature’s colorful embrace.'
                 label='Nature'
                 onImageClick={() => handleImageClick('nature')}
               />
               <ImageItem
                 src={galleryImages.beach}
+                alt="Beach during sunset"
                 text='Golden hours and endless horizons.'
                 label='Beaches'
                 onImageClick={() => handleImageClick('beach')}
