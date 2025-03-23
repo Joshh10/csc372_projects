@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.about-images{
+    background: white;
+    padding-top: 25px;
+    
+  }
+
+  .about-images h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 350;
+  }
+  
+  .about-container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    max-width: 1150px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .about-section {
+    position: relative;
+    margin: 50px 0 45px;
+  }
+  
+  .about-items {
+    margin-bottom: 100px;
+    gap:50px;
+    
+  }
+  
+  .about-item {
+    display: flex;
+    flex: 1;
+    margin: 0 15px;
+    border-radius: 10px;
+    width: 450px;
+  }
+
+ 
+  
+  .about-item-link {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    box-shadow: 0 15px 20px rgba(3, 3, 3, 0.17);
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+  }
+  
+  .about-item-sub {
+    position: relative;
+    width: 100%;
+    padding-top: 60%;
+    overflow: hidden;
+  }
+  
+  
+  .about-item-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    
+    transition: all 0.2s linear;
+  }
+  
+  .about-item-img:hover {
+    transform: scale(1.1);
+  }
+  
+  
+  .about-heading h1{
+    text-align: center;
+    font-weight: 600px;
+  }
+  .about-text{
+    margin: 0 auto;
+    width:450px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    
+  }
+
+  .solid{
+    background-color: white;
+    color: black;
+    border: 1px solid #fff;
+    
+  }
+
+  .btn{
+    padding: 8px 20px;
+    border-radius: 2px;
+    outline: none;
+    
+    cursor: pointer;
+  }
+
+  .about-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+  }
+
+  .about-text p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 350;
+  }
+  
+  
+  
+  
+  @media only screen and (min-width: 1024px) {
+    .about-items {
+      display: flex;
+      
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    .about-item {
+      margin-bottom: 2rem;
+      
+    }
+  }
+  
