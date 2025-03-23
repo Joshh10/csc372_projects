@@ -1,0 +1,17 @@
+<images>
+    <image id="night">
+        <src>/new-images/lights.webp</src>
+    </image>
+    <image id="light">
+        <src>/new-images/dog.webp</src>
+    </image>
+    <image id="animals">
+        <src>/new-images/nature.webp</src>
+    </image>
+    <image id="nature">
+        <src>/new-images/beach.webp</src>
+    </image>
+    <image id="beach">
+        <src>/new-images/night.webp</src>
+    </image>
+</images>

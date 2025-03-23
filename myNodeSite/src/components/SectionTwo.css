@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.images {
+  background: white;
+  
+}
+
+.images h1{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 350;
+}
+
+.images-container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  max-width: 1150px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.images-section {
+  position: relative;
+  margin: 50px 0 45px;
+}
+
+.images-items {
+  margin-bottom: 20px;
+}
+
+.images-item {
+  display: flex;
+  flex: 1;
+  margin: 0 15px;
+  border-radius: 10px;
+}
+
+.images-item-link {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  box-shadow: 0 6px 20px rgba(17, 17, 18, 0.17);
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.images-item-sub {
+  position: relative;
+  width: 100%;
+  padding-top: 60%;
+  overflow: hidden;
+}
+
+.images-item-sub::after {
+  content: attr(data-category);
+  position: absolute;
+  bottom: 0;
+  margin-left: 8px;
+  padding: 6px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #85d79e;
+  box-sizing: border-box;
+}
+
+.images-item-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  transition: all 0.2s linear;
+}
+
+.images-item-img:hover {
+  transform: scale(1.1);
+}
+
+.images-item-info {
+  padding: 20px 30px 30px;
+}
+
+.images-item-text {
+  color: #aaa;
+  font-size: 18px;
+  line-height: 24px;
+  width: 200px;;
+}
+
+
+.section-heading{
+  text-align: center;
+  color: #000000;
+}
+
+
+@media only screen and (min-width: 1024px) {
+  .images-items {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .images-item {
+    margin-bottom: 2rem;
+  }
+}
