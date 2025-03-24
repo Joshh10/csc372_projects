@@ -49,7 +49,7 @@ http.createServer((req, res) => {
         if(!error){
             serveStaticFile(res, fullPath, contentType);
         }else{
-            serveStaticFile(res, path.join(DIST_DIR, '404.html'), 'text/html', 404);
+            serveStaticFile(res, path.join('404.html'), 'text/html', 404);
         }
     });
 
