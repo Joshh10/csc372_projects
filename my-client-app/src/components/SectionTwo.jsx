@@ -64,16 +64,16 @@ function SectionTwo() {
             <ul className='images-items'>
               <ImageItem
                 src={galleryImages.night}
-                alt="Sunset on the beach"
-                text='Chasing the last light of day.'
-                label='Sunsets'
+                alt={imageData.night?.alt}
+                text={imageData.night?.text}
+                label={imageData.night?.label}
                 onImageClick={() => handleImageClick('night')}
               />
               <ImageItem
                 src={galleryImages.light}
-                alt="Neon night lights"
-                text='A dance of light through the night.'
-                label='Night Lights'
+                alt={imageData.light?.alt}
+                text={imageData.light?.text}
+                label={imageData.light?.label}
                 onImageClick={() => handleImageClick('light')}
                 
               />
@@ -82,23 +82,23 @@ function SectionTwo() {
             <ul className='images-items'>
               <ImageItem
                 src={galleryImages.animals}
-                alt="Puppy on the beach"
+                alt={imageData.animals?.alt}
                 text={imageData.animals?.text}
-                label='Animals'
+                label={imageData.animals?.label}
                 onImageClick={() => handleImageClick('animals')}
               />
               <ImageItem
                 src={galleryImages.nature}
-                alt="Close up of pink flowers"
-                text='Nature’s colorful embrace.'
-                label='Nature'
+                alt={imageData.nature?.alt}
+                text={imageData.nature?.text}
+                label={imageData.nature?.label}
                 onImageClick={() => handleImageClick('nature')}
               />
               <ImageItem
                 src={galleryImages.beach}
-                alt="Beach during sunset"
-                text='Golden hours and endless horizons.'
-                label='Beaches'
+                alt={imageData.beach?.alt}
+                text={imageData.beach?.text}
+                label={imageData.beach?.label}
                 onImageClick={() => handleImageClick('beach')}
               />
               
