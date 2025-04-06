@@ -18,13 +18,17 @@ function SectionTwo() {
     beach: Beach
   });
 
+  const [imageData, setImageData] = useState({});
+
   useEffect(() => {
     fetch('https://joshualawson.rhody.dev/data.php')
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         setImageData(data);
       });
   }, []);
+  
+  
 
   const handleImageClick = (imageKey) => {
     const xhr = new XMLHttpRequest();
