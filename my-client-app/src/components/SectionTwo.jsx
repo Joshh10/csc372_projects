@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import ImageItem from './ImageItem';
 import './SectionTwo.css';
 import Night from '../../images/night.webp'
@@ -17,6 +17,18 @@ function SectionTwo() {
     nature: Nature,
     beach: Beach
   });
+
+  const [imageData, setImageData] = useState({});
+
+  useEffect(() => {
+    fetch('https://joshualawson.rhody.dev/data.php')
+      .then((res) => res.json())
+      .then((data) => {
+        setImageData(data);
+      });
+  }, []);
+  
+  
 
   const handleImageClick = (imageKey) => {
     const xhr = new XMLHttpRequest();
@@ -71,7 +83,7 @@ function SectionTwo() {
               <ImageItem
                 src={galleryImages.animals}
                 alt="Puppy on the beach"
-                text='Unconditional joy in every step.'
+                text={imageData.animals?.text}
                 label='Animals'
                 onImageClick={() => handleImageClick('animals')}
               />
