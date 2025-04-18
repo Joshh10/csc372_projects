@@ -5,6 +5,8 @@ import './App.css'
 import Home from './components/pages/Home';
 import Gallery from './components/pages/Gallery';
 import Contact from './components/pages/Contact';
+import Login from './components/pages/Login';
+import Dashboard from './components/pages/Dashboard';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,6 +19,9 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="/gallery" element={<Gallery/>} />
         <Route path="/contact" element={<Contact/>} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/dash" element={<Dashboard/>} />
+        
       </Routes>
       
     
