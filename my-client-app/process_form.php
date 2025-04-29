@@ -1,49 +1,82 @@
 <?php
 session_start();
-include 'validation.php';
+include 'https://joshualawson.rhody.dev/valid.php';
 
-$values = ['name' => '', 'email' => '', 'age' => '', 'contact' => '', 'reason' => '', 'message' => ''];
-$errors = ['name' => '', 'email' => '', 'age' => '', 'contact' => '', 'reason' => '', 'message' => ''];
-$message = '';
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $values = array_map('htmlspecialchars', [
-        'name' => $_POST['name'] ?? '',
-        'email' => $_POST['email'] ?? '',
-        'age' => $_POST['age'] ?? '',
-        'contact' => $_POST['contact'] ?? '',
-        'reason' => $_POST['reason'] ?? '',
-        'message' => $_POST['message'] ?? '',
-    ]);
+$values = [
+    'name' => '',
+    'email' => '',
+    'age' => '',
+    'contact' => '',
+    'reason' => '',
+    'message' => ''
+];
 
-    if (!validateText($values['name'])) $errors['name'] = "Name must be between 2 and 50 characters.";
-    if (!filter_var($values['email'], FILTER_VALIDATE_EMAIL)) $errors['email'] = "Invalid email.";
-    if (!validateNumber($values['age'], 18, 99)) $errors['age'] = "Age must be 18–99.";
-    if (!validateOption($values['contact'], ['email', 'phone'])) $errors['contact'] = "Choose a contact method.";
-    if (!validateOption($values['reason'], ['support', 'feedback', 'career'])) $errors['reason'] = "Select a reason.";
+$errors = [
+    'name' => '',
+    'email' => '',
+    'age' => '',
+    'contact' => '',
+    'reason' => '',
+    'message' => ''
+];
 
-    $errorList = implode('', $errors);
+$responseMessage = '';
 
-    if ($errorList === '') {
-        $message = "Form submitted successfully!";
-        setcookie("username", $values['name'], time() + 3600);
-        $_SESSION['contact'] = $values['contact'];
-    } else {
-        $message = "Please correct the form errors.";
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    
+    foreach ($values as $key => $val) {
+        $values[$key] = htmlspecialchars(trim($_POST[$key] ?? ''));
     }
+
+    
+    if (!validateText($values['name'], 2, 50)) {
+        $errors['name'] = 'Name must be between 2 and 50 characters.';
+    }
+
+    if (!filter_var($values['email'], FILTER_VALIDATE_EMAIL)) {
+        $errors['email'] = 'Please enter a valid email address.';
+    }
+
+    if (!validateNumberInRange($values['age'], 13, 120)) {
+        $errors['age'] = 'Age must be between 13 and 120.';
+    }
+
+    $allowedContacts = ['email', 'phone'];
+    if (!validateOption($values['contact'], $allowedContacts)) {
+        $errors['contact'] = 'Please select a valid contact method.';
+    }
+
+    $allowedReasons = ['support', 'feedback', 'career'];
+    if (!validateOption($values['reason'], $allowedReasons)) {
+        $errors['reason'] = 'Please select a valid reason for contact.';
+    }
+
+    if (!validateText($values['message'], 5, 500)) {
+        $errors['message'] = 'Message must be between 5 and 500 characters.';
+    }
+
+    
+    $allErrors = implode('', $errors);
+    if (!empty($allErrors)) {
+        $responseMessage = 'Please correct the form errors.';
+    } else {
+        
+        setcookie('user_name', $values['name'], time() + 3600, '/');
+        setcookie('user_email', $values['email'], time() + 3600, '/');
+        setcookie('user_age', $values['age'], time() + 3600, '/');
+
+        
+        $_SESSION['user_name'] = $values['name'];
+        $_SESSION['user_email'] = $values['email'];
+        $_SESSION['user_age'] = $values['age'];
+
+        $responseMessage = 'Form submitted successfully! Cookies and session data are set.';
+    }
+
+    echo $responseMessage;
+} else {
+    echo "Error: Invalid form submission.";
 }
 ?>
-
-<!DOCTYPE html>
-<html>
-<head><title>Form Result</title></head>
-<body>
-<h2><?php echo $message; ?></h2>
-<?php if ($message === "Form submitted successfully!"): ?>
-  <p>Hello, <?php echo htmlspecialchars($_COOKIE['username'] ?? ''); ?>!</p>
-  <p>Preferred Contact: <?php echo $_SESSION['contact'] ?? ''; ?></p>
-<?php endif; ?>
-
-<?php session_destroy(); ?>
-</body>
-</html>
